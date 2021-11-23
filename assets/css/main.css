@@ -1,0 +1,343 @@
+/*-- Base styles --*/
+h1{
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 120%;
+    color: #000000;
+    white-space: pre-line;
+}
+h2{
+    font-size: 61px;
+    font-weight: 400;
+    line-height: 120%;
+    color: #000000;
+    white-space: pre-line;
+}
+h3{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 120%;
+    color: #000000
+    
+}
+p,span,a{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #212529;
+}
+.container{
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1270px;
+    display: flex;
+    align-items: center;
+}
+.button{ 
+    width: 153px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    border: 2px solid #000000;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+.button__body{
+    color: #ffffff;
+}
+.button:hover{
+    background: #ffffff; /* Old browsers */
+}
+.button:hover .button__body{
+    color: #000000;
+}
+.subheading{
+    margin-bottom: 5px;
+    color: #A6A6A6;
+    text-align: center;
+}
+/*-- Header --*/
+.header{
+    padding: 25px 0;
+}
+.header__container{
+    display: flex;
+    justify-content: space-between;
+}
+.header__navbar{
+    display: flex;
+    align-items: center;
+}
+.header__nav-link{
+    margin: 0 15px;
+    font-size: 15px;
+}
+/*-- Introducing --*/
+.introducing{
+    padding: 54px 0 100px;
+}
+.introducing__container{
+    flex-direction: column;
+    justify-content: center;
+}
+.introducing__text{
+    margin: 23px 0 36px;
+    max-width: 720px;
+    text-align: center;
+}
+.introducing__links{
+    margin-bottom: 55px;
+    display: flex;
+    align-items: center;
+}
+.introducing__links>*{
+    margin: 0 18px;
+}
+.introducing__features-list{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.introducing__feature{
+    position: relative;
+    color: #686868;
+}
+.introducing__feature:before{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: -32px;
+    width: 18.2px;
+    height: 13.2px;
+    background-image: url(/assets/img/check.svg);
+}
+.introducing__path{
+    margin:40px 0 69px;
+}
+.introducing__title{
+    margin: 0 auto 89px;
+    max-width: 1012px;
+}
+/*-- How it works? (hit) --*/
+.hit{
+    padding: 35px 0 47px;
+    background-color: #FAFAFA;
+}
+.hit__container {
+    flex-direction: column;
+}
+.hit__heading{
+    text-align: center;
+    white-space: pre-line;
+}
+.hit__inner-section{
+    margin-top: 95px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.hit__step-card{
+    max-width: 393.33px;
+    display: flex;
+    flex-direction: column;
+}
+.hit__card-image{
+    margin: 0 auto;
+}
+
+/*-- Tracking --*/
+.tracking{
+    padding: 80px 0 100px;
+}
+.tracking__container{
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.tracking__text{
+    margin: 23px 0 16px;
+    max-width: 517px;
+}
+
+/*-- Advantage --*/
+.advantage{
+    padding: 70px 0;
+    background-color: #FAFAFA;
+}
+.advantage__container{
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.advantage__container>*{
+    margin: 0 15px;
+}
+.advantage__heaeding{
+    margin-bottom: 23px;
+    max-width: 530px;
+}
+.advantege__text{
+    max-width: 480px;
+}
+/*-- Area --*/
+.area{
+    padding: 50px 0;
+}
+.area__container{
+    flex-direction: column;
+    justify-content: center;
+}
+.area__text{
+    margin: 23px 0 12px;
+    max-width: 510px;
+    text-align: center;
+}
+.area__image{
+    margin-top: 25px;
+}
+/*-- FAQ --*/
+.faqs{
+    padding: 50px 0;
+}
+.faqs__container {
+    flex-direction: column;
+}
+.faqs__heading{
+    margin-bottom: 70px;
+    text-align: center;
+}
+.faqs__spoilers{
+    width: 100%;
+}
+.faq__question{
+    margin: 0 auto;
+    padding: 20px 0 16px;
+    max-width: 750px;
+    border-bottom: 1px solid #000000;
+}
+.faq__spoiler-heading{
+    position: relative;
+    width: 100%;
+    cursor: pointer;
+}
+.faq__spoiler-heading::before,
+.faq__spoiler-heading::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 12px;
+    height: 2px;
+    background-color: #000000;
+    transition: 0.5s;
+}
+.faq__spoiler-heading::before{
+    right: 14px;
+    transform: rotate(45deg);
+}
+.faq__spoiler-heading::after{
+    right: 7px;
+    transform: rotate(-45deg);
+}
+.faq__spoiler-heading.spoiler-active::before{
+    transform: rotate(-45deg);
+}
+.faq__spoiler-heading.spoiler-active::after{
+    transform: rotate(45deg);
+}
+.faq__spoiler-text{
+    height: 0;
+    opacity: 0;
+    transition: 0.6s;
+}
+.faq__spoiler-text.spoiler-active{
+    height: 24px;
+    opacity: 1;
+}
+
+/*-- Request --*/
+.request{
+    padding: 38px 0 88px;
+}
+.request__container{
+    padding: 90px 22px 90px 90px;
+    flex-wrap: wrap;
+    background-color: #FBFBFB;
+    border-radius: 25px;
+}
+.request__subheading{
+    text-align: left;
+}
+.request__text{
+    margin: 23px 0 16px;
+    max-width: 510px;
+}
+/*-- Footer --*/
+.footer__container{
+    padding: 40px 15px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 1px solid #E5E5E5;
+}
+.footer__tagline{
+    margin: 10px 0 20px;
+    color:#A6A6A6;
+    font-size: 15px;
+    white-space: pre-line;
+}
+.footer__copyright-text{
+    color:#A6A6A6;
+    font-size: 13px;
+}
+.footer__links-col{
+    max-width: 450px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer__subheading{
+    margin-bottom: 9px;
+    text-align: left;
+}
+.footer__link{
+    margin-bottom: 9px;
+    display: block;
+}
+@media screen and (max-width: 1240px) {
+    .hit__inner-section{
+        justify-content: space-around;
+    }
+    .hit__step-card{
+        margin-top: 20px;
+    }
+    .tracking__container{
+        justify-content: center;
+    }
+    .tracking__image{
+        margin-top: 30px;
+    }
+    .advantage__heading{
+        margin-top: 30px;
+    }
+    .request__container {
+        justify-content: center;
+    }
+
+}
+@media screen and (max-width: 768px){
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 38px;
+    }
+    .introducing__features-list{
+        flex-direction: column;
+        margin-left: 60px;
+    }
+    .request__container {
+        padding: 90px 15px;
+    }
+}
